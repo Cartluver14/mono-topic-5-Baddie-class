@@ -63,7 +63,7 @@ namespace mono_topic_5_Baddie_class
 
             for (int i = 1; i <= 8; i++)
             {
-                boosTextures.Add(Content.Load<Texture2D>( "images/boo-move-1"));
+                boosTextures.Add(Content.Load<Texture2D>( "images/boo-move-" + i));
             }
             
 
@@ -79,7 +79,7 @@ namespace mono_topic_5_Baddie_class
             // TODO: Add your update logic here
 
             mouseState = Mouse.GetState();  
-            boos1.Update(mouseState);
+            boos1.Update(gameTime,mouseState);
 
             base.Update(gameTime);
         }
